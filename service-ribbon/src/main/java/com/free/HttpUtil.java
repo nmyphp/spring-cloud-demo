@@ -1,5 +1,9 @@
 package com.free;
 
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpStatus;
 import org.apache.http.NameValuePair;
@@ -12,11 +16,6 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 /**
  * 包装Http请求工具
  */
@@ -27,9 +26,7 @@ public class HttpUtil {
     /**
      * Http请求
      *
-     * @param uri
      * @return 字符串格式的结果
-     * @throws IOException
      */
     public static String get(String uri) throws IOException {
         return get(uri, null);
@@ -37,10 +34,6 @@ public class HttpUtil {
 
     /**
      * GET请求，携带header信息
-     * @param uri
-     * @param headers
-     * @return
-     * @throws IOException
      */
     public static String get(String uri, Map<String, Object> headers) throws IOException {
         HttpGet httpGet = new HttpGet(uri);
@@ -57,10 +50,7 @@ public class HttpUtil {
     /**
      * Post请求
      *
-     * @param uri
      * @param parameters 请求参数
-     * @return
-     * @throws IOException
      */
     public static String post(String uri, Map<String, Object> parameters) throws IOException {
         if (!parameters.isEmpty()) {
@@ -79,10 +69,6 @@ public class HttpUtil {
 
     /**
      * 获取返回内容
-     *
-     * @param response
-     * @return
-     * @throws IOException
      */
     private static String getResponseBody(CloseableHttpResponse response) throws IOException {
         try {
