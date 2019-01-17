@@ -16,4 +16,4 @@ Eureka注册中心
 
 基于配置+ @Conditional的选择性Bean注入
 
-[!Conditional-impl示意图](../doc/Conditional-impl.png)
+![示意图](https://github.com/nmyphp/spring-cloud-demo/blob/develop/doc/Conditional-impl.png)
