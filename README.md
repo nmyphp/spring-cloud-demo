@@ -15,3 +15,5 @@ Eureka注册中心
 基于spring-boot + jdbc 数据查询
 
 基于配置+ @Conditional的选择性Bean注入
+
+[!Conditional-impl示意图](../doc/Conditional-impl.png)
