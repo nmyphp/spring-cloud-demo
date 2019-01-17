@@ -1,6 +1,14 @@
-- spring-cloud-demo
+- eureka-register
 
-spring-cloud工程尝鲜，注册中心，服务者，消费者
+Eureka注册中心
+
+- service-provider
+
+服务提供者，多个示例配置：instance1、instance2
+
+- service-ribbon
+
+使用Ribbon做的负载均衡模拟消费方调用
 
 - spring-jdbc-demo
 
