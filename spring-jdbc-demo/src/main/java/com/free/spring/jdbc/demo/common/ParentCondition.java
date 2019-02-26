@@ -4,6 +4,10 @@ import org.springframework.core.type.AnnotatedTypeMetadata;
 import org.springframework.core.type.ClassMetadata;
 import org.springframework.core.type.MethodMetadata;
 
+/**
+ * 使用通用的CommonCondition替代
+ */
+@Deprecated
 public class ParentCondition {
     protected String getInterFaceName(AnnotatedTypeMetadata annotatedTypeMetadata) {
         if (annotatedTypeMetadata instanceof ClassMetadata) {

@@ -1,6 +1,6 @@
 package com.free.spring.jdbc.demo.service.impl;
 
-import com.free.spring.jdbc.demo.common.DefaultCondition;
+import com.free.spring.jdbc.demo.common.CommonCondition;
 import com.free.spring.jdbc.demo.dao.OrderPromotionDao;
 import com.free.spring.jdbc.demo.dao.po.OrderPromotion;
 import com.free.spring.jdbc.demo.service.OrderPromotionService;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 /**
  * 默认实现.
  */
-@Conditional(DefaultCondition.class)
+@Conditional(CommonCondition.class)
 @Service
 public class DefaultOrderPromotionServiceImpl implements OrderPromotionService {
 
