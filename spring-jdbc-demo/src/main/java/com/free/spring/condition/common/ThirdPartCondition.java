@@ -7,7 +7,11 @@ import org.springframework.context.annotation.ConditionContext;
 import org.springframework.core.env.Environment;
 import org.springframework.core.type.AnnotatedTypeMetadata;
 
-public class ThirdPartyCondition extends ParentCondition implements Condition {
+/**
+ * 使用通用的CommonCondition替代
+ */
+@Deprecated
+public class ThirdPartCondition extends ParentCondition implements Condition {
 
     @Override
     public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {
@@ -15,6 +19,6 @@ public class ThirdPartyCondition extends ParentCondition implements Condition {
 
         String interfaceName = getInterFaceName(annotatedTypeMetadata);
         String implPrefix = environment.getProperty(interfaceName);
-        return Constant.THIRD_PARTY_PREFIX.equals(implPrefix);
+        return Constant.THIRD_PART_PREFIX.equals(implPrefix);
     }
 }

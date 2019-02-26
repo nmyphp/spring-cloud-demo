@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class ThirdPartyOrderPromotionDao {
+public class ThirdPartOrderPromotionDao {
 
     public static final String SQL_FIND_BY_TID = "select tid,promotion_name,discount_fee from order_promotion_3party "
         + "where tid = ? and partner_id=9";
